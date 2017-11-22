@@ -22,6 +22,7 @@
     "lite-server": "^2.3.0"
   },
   "dependencies": {
+    "atom-autocomplete": "^1.0.0",
     "bootstrap": "^4.0.0-alpha.6"
   }
 }
