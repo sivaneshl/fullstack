@@ -236,6 +236,18 @@
             <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
+            <!-- two buttons - play and pause
+            <div class="btn-group" id="carouselbuttons">
+              <button class="btn-danger btn-sm" id="carouselpause">
+                <span class="fa fa-pause"></span>
+              </button>
+              <button class="btn-danger btn-sm" id="carouselplay">
+                <span class="fa fa-play"></span>
+              </button>
+            </div> -->
+            <button class="btn-danger btn-sm" id="carouselbuttons">
+              <span class="fa fa-pause"></span>
+            </button>
           </div>
         </div>
       </div>
@@ -426,6 +438,37 @@
         $('[data-toggle="tooltip"]').tooltip();
       });
     </script> -->
+
+    <!-- carousel buttons play and pause seperate
+    <script>
+      $(document).ready(function(){
+          $("#mycarousel").carousel( { interval: 2000 } );
+          $("#carouselpause").click(function(){
+              $("#mycarousel").carousel('pause');
+          });
+          $("#carouselplay").click(function(){
+              $("#mycarousel").carousel('cycle');
+          });
+      });
+    </script> -->
+    <!-- carousel button play and pause in one -->
+    <script>
+      $(document).ready(function(){
+        $("#mycarousel").carousel({interval: 1000});
+        $("#carouselbuttons").click(function(){
+          if ($("#carouselbuttons").children("span").hasClass('fa-pause')){
+            $("#mycarousel").carousel('pause');
+            $("#carouselbuttons").children("span").removeClass('fa-pause');
+            $("#carouselbuttons").children("span").addClass('fa-play');
+          }
+          else if ($("#carouselbuttons").children("span").hasClass('fa-play')){
+            $("#mycarousel").carousel('cycle');
+            $("#carouselbuttons").children("span").removeClass('fa-play');
+            $("#carouselbuttons").children("span").addClass('fa-pause');
+          }
+        });
+      });
+    </script>
 
 </body>
 
