@@ -1,0 +1,76 @@
+// color variables
+@lt-grey: #ddd;
+@background-dark: #800080;
+@background-light: #800080;
+@background-pale: #ffccff;
+
+// height variables
+@carousel-item-height: 200px;
+
+// mixins
+.zero-margin (@pad-up-down: 0px, @pad-left-right: 0px) {
+  margin: 0px auto;
+  padding: @pad-up-down @pad-left-right;
+}
+
+.row-header {
+  .zero-margin;
+}
+
+.row-content {
+  .zero-margin(50px, 0px);
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+
+.footer {
+  background-color: @lt-grey;
+  .zero-margin(20px, 0px);
+}
+
+.jumbotron {
+  .zero-margin(70px, 30px);
+  background-color: @background-light;
+  color: ivory;
+}
+
+address{
+  margin: 0px auto;
+  font-size: 80%;
+  color: black;
+}
+
+body{
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+
+.navbar-inverse{
+  background-color: @background-dark;
+}
+
+.tab-content{
+  border-left: 1px solid @lt-grey;
+  border-right: 1px solid @lt-grey;
+  border-bottom: 1px solid @lt-grey;
+  padding: 10px;
+}
+
+.carousel {
+  background-color: @background-dark;
+  .carousel-item {
+    height: @carousel-item-height;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      min-height: @carousel-item-height;
+    }
+  }
+}
+
+#carouselbuttons{
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+}
