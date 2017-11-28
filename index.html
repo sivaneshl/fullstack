@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
+    <!--build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
-
+    <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -388,7 +389,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-5 col-sm-2">
+                <div class="col-5 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
@@ -428,47 +429,12 @@
     </footer>
 
     <!-- JQuery first, then Tether, then Bootstrap JS -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- tooltip functionality
-    <script>
-      $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script> -->
-
-    <!-- carousel buttons play and pause seperate
-    <script>
-      $(document).ready(function(){
-          $("#mycarousel").carousel( { interval: 2000 } );
-          $("#carouselpause").click(function(){
-              $("#mycarousel").carousel('pause');
-          });
-          $("#carouselplay").click(function(){
-              $("#mycarousel").carousel('cycle');
-          });
-      });
-    </script> -->
-    <!-- carousel button play and pause in one -->
-    <script>
-      $(document).ready(function(){
-        $("#mycarousel").carousel({interval: 2000});
-        $("#carouselbuttons").click(function(){
-          if ($("#carouselbuttons").children("span").hasClass('fa-pause')){
-            $("#mycarousel").carousel('pause');
-            $("#carouselbuttons").children("span").removeClass('fa-pause');
-            $("#carouselbuttons").children("span").addClass('fa-play');
-          }
-          else if ($("#carouselbuttons").children("span").hasClass('fa-play')){
-            $("#mycarousel").carousel('cycle');
-            $("#carouselbuttons").children("span").removeClass('fa-play');
-            $("#carouselbuttons").children("span").addClass('fa-pause');
-          }
-        });
-      });
-    </script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 
 </body>
 

@@ -8,28 +8,28 @@ $background-pale: #ffccff;
 $carousel-item-height: 200px;
 
 // mixin
-@mixin zero-margin ($pad-up-down, $pad-left-right) {
+@mixin zero-margin ($pad-top, $pad-right, $pad-bottom, $pad-left) {
   margin: 0px auto;
-  padding: $pad-up-down $pad-left-right;
+  padding: $pad-top $pad-right $pad-bottom $pad-left;
 }
 
 .row-header {
-  @include zero-margin(0px, 0px);
+  @include zero-margin(0px, auto, 0px, auto);
 }
 
 .row-content {
-  @include zero-margin(50px, 0px);
+  @include zero-margin(50px, 0px, 50px, 0px);
   border-bottom: 1px ridge;
   min-height: 400px;
 }
 
 .footer {
   background-color: $lt-grey;
-  @include zero-margin(20px, 0px);
+  @include zero-margin(20px, 0px, 20px, 0px);
 }
 
 .jumbotron {
-  @include zero-margin(70px, 30px);
+  @include zero-margin(70px, 30px, 70px, 30px);
   background-color: $background-light;
   color: ivory;
 }
