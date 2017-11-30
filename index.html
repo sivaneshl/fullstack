@@ -33,8 +33,10 @@
               </ul>
               <!-- <span class="navbar-text"> -->
               <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" data-target="#loginmodal" data-toggle="modal"><span class="fa fa-sign-in"></span> Login</a>
+                <li class="nav-item active" id="loginnavitem">
+                  <!-- removed the below in the <a tag to enable modal using javascript
+                  data-target="#loginmodal" data-toggle="modal"-->
+                  <a class="nav-link" href="#login"><span class="fa fa-sign-in"></span> Login</a>
                 </li>
               </ul>
               <!-- </span> -->
@@ -94,8 +96,10 @@
                     data-toggle="tooltip" data-html="true"
                     title="Or call us at<br><strong>+999 12345678</strong>"
                     data-placement="bottom">Reserve Table</a> -->
-                  <a class="btn btn-warning btn-block btn-sm" role="button"
-                    data-target="#reservemodal" data-toggle="modal">Reserve Table</a>
+                  <a class="btn btn-warning btn-block btn-sm" role="button" id="reservebtn">
+                    <!-- removing this to enable the modal using javascript
+                    data-target="#reservemodal" data-toggle="modal" -->
+                    Reserve Table</a>
                 </div>
             </div>
         </div>
